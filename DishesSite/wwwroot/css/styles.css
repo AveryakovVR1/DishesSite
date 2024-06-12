@@ -1,0 +1,50 @@
+﻿body {
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    background-image: url("../img/background.jpg");
+    height: 100vh; /* Высота контейнера */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text-container {
+    height: 300px;
+    width: 60%;
+    background-color: #EEE6A3;
+    color: #C41E3A;
+    font-size: 25px;
+    border-radius: 10px;
+    border: 1px solid #C41E3A;
+    text-align: center;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+a {
+    font-size: 1.2rem;
+    display: inline-block;
+    padding: 10px 20px; /* Задаем отступы */
+    border-radius: 15px; /* Делаем кнопки округлыми */
+    background-color: #E32636; /* Изменяем цвет фона при наведении */
+    color: #EEE8AA; /* Изменяем цвет текста при наведении */
+    text-decoration: none; /* Убираем подчеркивание */
+    border: 1px solid #EEE8AA; /* Добавляем рамку */
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Плавное изменение цвета */
+    margin: 0 10px; /* Добавляем отступы по бокам */
+    font-style: italic;
+}
+
+    a:hover {
+        color: #E32636; /* Цвет текста кнопок */
+        background-color: #EEE8AA; /* Цвет фона кнопок */
+        border-color: #E32636; /* Изменяем цвет рамки при наведении */
+    }
+
+    a:active {
+        transform: translateY(1px); /* Создаем эффект нажатия */
+    }

@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Пользовательское навигационное меню</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("../img/back.jpg");
+            color: #EEE6A3;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu-container {
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+            overflow-y: auto;
+        }
+
+        h2 {
+            color: #C41E3A;
+            text-align: center;
+        }
+
+        .menu-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu-container .menu-link {
+            background-color: #293133;
+            color: #C41E3A;
+            border: none;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+        }
+
+            .menu-container .menu-link:hover {
+                background-color: #555;
+            }
+
+        .menu-container label {
+            color: #EEE6A3;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .return-button {
+            background-color: #C41E3A;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            text-transform: uppercase;
+        }
+
+            .return-button:hover {
+                background-color: #990024;
+            }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <h2>Для пользователей</h2>
+        <h2>Функционал:</h2>
+        <form method="post" action="/UserMenu">
+            <a class="menu-link" href="/Home/Index">Главная страница</a>
+            <a class="menu-link" href="/Recipes/Index">Рецепты</a>
+            <a class="menu-link" href="/Account/Login">Авторизация</a>
+            <a class="menu-link" href="/Account/Register">Регистрация</a>
+            <a class="menu-link" href="/Employees/Index">Список пользователей</a>
+            <a class="menu-link" href="/Organizations/Index">Список аккаунтов</a>
+            <a class="menu-link" href="/Organizations/Index">Список ролей</a>
+            <a class="menu-link" href="/Role/Index">Список ролей</a>
+        </form>
+        <div class="button-container">
+            <form method="get" action="/Home/Index">
+                <button type="submit" class="return-button">Домой</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

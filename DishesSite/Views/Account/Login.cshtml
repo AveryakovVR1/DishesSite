@@ -1,0 +1,104 @@
+﻿@model DishesSite.ViewModels.LoginViewModel
+
+<style>
+    body {
+        background-image: url("../img/bac.jpg");
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .login-container {
+        width: 400px;
+        margin: 100px auto;
+        background: linear-gradient(to bottom right, #F0DC82, #E32636);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #E32636;
+        }
+
+        .login-container label {
+            display: block;
+            margin-bottom: 5px;
+            color: #E32636;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #E32636;
+            border-radius: 5px;
+        }
+
+        .login-container input[type="submit"] {
+            width: 100%;
+            background-color: #7B001C;
+            color: #F0DC82;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+            .login-container input[type="submit"]:hover {
+                background-color: #0056b3;
+            }
+
+    .validation-message {
+        color: #C41E3A;
+        font-size: 12px;
+    }
+
+    .button-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .return-button {
+        padding: 10px 20px;
+        background-color: #F0E68C;
+        color: #5E2129;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .return-button:hover {
+            background-color: #BADBAD;
+        }
+</style>
+
+<div class="login-container">
+    <h2>Вход</h2>
+    <form method="post" asp-action="Login" asp-controller="Account">
+        <div>
+            <label asp-for="Login">Логин:</label>
+            <input asp-for="Login" />
+            <span class="validation-message" asp-validation-for="Login"></span>
+        </div>
+        <div>
+            <label asp-for="Password">Пароль:</label>
+            <input asp-for="Password" type="password" />
+            <span class="validation-message" asp-validation-for="Password"></span>
+        </div>
+        <div>
+            <input type="submit" value="Войти" />
+        </div>
+    </form>
+</div>
+<div class="button-container">
+    <form method="get" action="/Home/Index">
+        <button type="submit" class="return-button">Назад</button>
+    </form>
+</div>
+
